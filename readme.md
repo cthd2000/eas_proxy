@@ -24,7 +24,7 @@ java 签名算法: 理论上就是字典序排序 key 再根据 key 拼接。
         }
         return false;
     }
-
+	//排序拼接
     public static String getSignCheckContent(Map<String, Object> params) {
         if (params == null) {
             return null;
