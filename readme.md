@@ -94,6 +94,7 @@ BP | 付款单
 LM | 库位移动单
 CS | 确认签收日期
 VO | 凭证
+SN | 无来源销售出库单
 
 ## <span id="http">Http 响应</span>
 
