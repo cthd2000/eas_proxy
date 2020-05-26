@@ -11,6 +11,7 @@
 ## 关于签名
 java 签名算法: 理论上就是字典序排序 key 再根据 key 拼接。
 ```Java
+	//校验签名
    public static boolean checkSign(Map<String, Object> params, String projectKey) {
         String hash = (String) params.get("sign");
         params.remove("sign");
