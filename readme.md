@@ -356,6 +356,28 @@ desc | string | 说明
 }
 ```
 
+***
++++
+___
+___
++++
+***
+## <span id="PO">采购订单</span>
+
+### 1.字段定义
+#### 单据头字段
+| 字段    | 字段类型 | 字段说明 | 备注 |
+| ------- | -------- | -------- | -------- |
+| baseStatus | String | 单据状态 | 审核状态：4 |
+| billTypeID | String | 单据类型 | 采购订单：220 |
+| bizDate | Date | 业务日期 | 毫秒 |
+| createTime | Date | 制单日期 | 毫秒 |
+| bizType | String | 业务类型 | 普通采购：110 |
+| creator | String | 制单人 | EAS用户编码 |
+| currency | String | 币别 | EAS币别编码或ISO货币代码，人民币：BB01或RMB |
+| exchangeRate | BigDecimal | 汇率 |  |
+| inTax | boolean | 是否含税 | true |
+| paymentType | String | 付款方式 | 赊购：004 |
 | purchaseOrgUnit | String | 采购组织 | EAS采购组织编码 |
 | supplier | String | 供应商 | EAS供应商编码 |
 | totalAmount | BigDecimal | 总金额 | 保留2位小数 |
