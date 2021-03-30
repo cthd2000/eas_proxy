@@ -520,37 +520,37 @@ entries | List | 分录 |
 
 #### 分录字段
 
-字段 | 字段类型 | 字段说明 | 备注
---- | --- | --- | ---
-seq | int | 行号 | 会携带在回告报文中
-id | String | 来源单据明细id | EAS采购订单分录id
-bizTraceNumber | String | 业务跟踪号 | 
-orderNumber | String | 供应商订单号 | 
-warehouse | String | 仓库 | 备注
-material | String | 物料 | EAS物料编码
-location | String | 库位 | 良品区：01；机损区：02；箱损区：03；待报废：04；超保区：05；售后区
-lot | String | 批次 | 
-taxPrice | BigDecimal | 含税单价 | 保留6位小数
-actualTaxPrice | BigDecimal | 实际含税单价 | 保留6位小数
-actualPrice | BigDecimal | 实际单价 | 保留6位小数
-price | BigDecimal | 单价 | 保留6位小数
-unitActualCost | BigDecimal | 单位实际成本 | 保留6位小数
-unitPurchaseCost | BigDecimal | 单位采购成本 | 保留6位小数
-discountRate | BigDecimal | 折扣率 | 
-discountAmount | BigDecimal | 折扣 | 保留2位小数
-taxRate | BigDecimal | 税率 | 
-tax | BigDecimal | 税额 | 保留2位小数
-taxAmount | BigDecimal | 价税合计 | 保留2位小数
-actualCost | BigDecimal | 实际成本 | 保留2位小数
-amount | BigDecimal | 金额 | 保留2位小数
-qty | BigDecimal | 数量 | 
-baseQty | BigDecimal | 数量 | 
-localAmount | BigDecimal | 本位币金额 | 保留2位小数
-localPrice | String | 本位币单价 | 保留6位小数
-localTax | String | 本位币税额 | 保留2位小数
-localTaxAmount | String | 本位币价税合计 | 保留2位小数
-purchaseCost | BigDecimal | 采购成本 | 保留2位小数
-present | boolean | 是否赠品 | 赠品：true; 非赠品：false。默认false
+| 字段    | 字段类型 | 字段说明 | 备注 |
+| --- | --- | --- | --- |
+| seq | int | 行号 | 会携带在回告报文中 |
+| id | String | 来源单据明细id | EAS采购订单分录id |
+| bizTraceNumber | String | 业务跟踪号 |  |
+| orderNumber | String | 供应商订单号 |  |
+| warehouse | String | 仓库 | 备注 |
+| material | String | 物料 | EAS物料编码 |
+| location | String | 库位 | 良品区：01；机损区：02；箱损区：03；待报废：04；超保区：05；售后区 |
+| lot | String | 批次 |  |
+| taxPrice | BigDecimal | 含税单价 | 保留6位小数 |
+| actualTaxPrice | BigDecimal | 实际含税单价 | 保留6位小数 |
+| actualPrice | BigDecimal | 实际单价 | 保留6位小数 |
+| price | BigDecimal | 单价 | 保留6位小数 |
+| unitActualCost | BigDecimal | 单位实际成本 | 保留6位小数 |
+| unitPurchaseCost | BigDecimal | 单位采购成本 | 保留6位小数 |
+| discountRate | BigDecimal | 折扣率 |  |
+| discountAmount | BigDecimal | 折扣 | 保留2位小数 |
+| taxRate | BigDecimal | 税率 |  |
+| tax | BigDecimal | 税额 | 保留2位小数 |
+| taxAmount | BigDecimal | 价税合计 | 保留2位小数 |
+| actualCost | BigDecimal | 实际成本 | 保留2位小数 |
+| amount | BigDecimal | 金额 | 保留2位小数 |
+| qty | BigDecimal | 数量 |  |
+| baseQty | BigDecimal | 数量 |  |
+| localAmount | BigDecimal | 本位币金额 | 保留2位小数 |
+| localPrice | String | 本位币单价 | 保留6位小数 |
+| localTax | String | 本位币税额 | 保留2位小数 |
+| localTaxAmount | String | 本位币价税合计 | 保留2位小数 |
+| purchaseCost | BigDecimal | 采购成本 | 保留2位小数 |
+| present | boolean | 是否赠品 | 赠品：true; 非赠品：false。默认false |
 
 ### 2.报文
 ```json
