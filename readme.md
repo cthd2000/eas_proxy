@@ -357,17 +357,16 @@ desc | string | 说明
 ```
 
 ***
-+++
-___
-___
-+++
 ***
+***
+
 ## <span id="PO">采购订单</span>
 
 ### 1.字段定义
 #### 单据头字段
+
 字段 | 字段类型 | 字段说明 | 备注
-------- | -------- | -------- | --------
+--- | --- | --- | ---
 baseStatus | String | 单据状态 | 审核状态：4
 billTypeID | String | 单据类型 | 采购订单：220
 bizDate | Date | 业务日期 | 毫秒
@@ -392,7 +391,7 @@ entries | List | 分录 |
 #### 分录字段
 
 字段 | 字段类型 | 字段说明 | 备注
-------- | -------- | -------- | --------
+--- | --- | --- | ---
 seq | int | 行号 | 回告报文中会携带 |
 orderNumber | String | 供应商订单号 | 
 bizTraceNumber | String | 业务跟踪号 | 
@@ -495,8 +494,9 @@ present | boolean | 是否赠品 | 非赠品：false；赠品：true
 ## <span id="PI">采购入库单</span>
 ###  1.字段定义
 #### 单据头字段
+
 字段 | 字段类型 | 字段说明 | 备注
-------- | -------- | -------- | --------
+--- | --- | --- | ---
 baseStatus | String | 单据状态 | 审核状态：4
 billTypeID | String | 单据类型 | 采购入库单：103
 bizDate | Date | 业务日期 | 毫秒
@@ -519,8 +519,9 @@ totalQty | BigDecimal | 总数量 |
 entries | List | 分录 | 
 
 #### 分录字段
+
 字段 | 字段类型 | 字段说明 | 备注
-------- | -------- | -------- | --------
+--- | --- | --- | ---
 seq | int | 行号 | 会携带在回告报文中
 id | String | 来源单据明细id | EAS采购订单分录id
 bizTraceNumber | String | 业务跟踪号 | 
@@ -640,8 +641,9 @@ present | boolean | 是否赠品 | 赠品：true; 非赠品：false。默认fals
 
 ### 1、字段定义
 #### 单据头字段
+
 | 字段 | 字段类型 | 字段说明 | 备注 |
-| ------- | -------- | -------- | -------- |
+| --- | --- | --- | --- |
 | baseStatus | String | 单据状态 | 审核状态：4 |
 | billType | String | 单据类型 | 销售订单：310 |
 | bizDate | Date | 业务日期 | 毫秒 |
@@ -664,8 +666,9 @@ present | boolean | 是否赠品 | 赠品：true; 非赠品：false。默认fals
 
 
 #### 分录字段
+
 | 字段 | 字段类型 | 字段说明 | 备注 |
-| ------- | -------- | -------- | -------- |
+| --- | --- | --- | --- |
 | seq | int | 行号 | 会携带在回告报文中 |
 | orderNumber | String | 客户订单号 |  |
 | bizTraceNumber | String | 业务跟踪号 | 备注 |
@@ -766,8 +769,9 @@ present | boolean | 是否赠品 | 赠品：true; 非赠品：false。默认fals
 
 ### 1.字段定义
 #### 单据头字段
+
 | 字段 | 字段类型 | 字段说明 | 备注 |
-| ------- | -------- | -------- | -------- |
+| --- | --- | --- | --- |
 | id | String | 来源单据id | EAS销售出库单id |
 | baseStatus | String | 单据状态 | 审核状态：“4” |
 | sourceFunction | String | 来源功能 | 重复推单校验依据 |
@@ -785,8 +789,9 @@ present | boolean | 是否赠品 | 赠品：true; 非赠品：false。默认fals
 | totalLocalAmount | BigDecimal | 价税总合计本位币 | 保留2位小数 |
 
 #### 分录字段
+
 | 字段 | 字段类型 | 字段说明 | 备注 |
-| ------- | -------- | -------- | -------- |
+| --- | --- | --- | --- |
 | seq | int | 行号 | 会携带在回告报文中 |
 | qty | BigDecimal | 数量 |  |
 | id | String | 来源单据分录id | EAS销售订单分录id |
