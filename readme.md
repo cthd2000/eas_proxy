@@ -366,53 +366,53 @@ ___
 
 ### 1.字段定义
 #### 单据头字段
-| 字段    | 字段类型 | 字段说明 | 备注 |
-| ------- | -------- | -------- | -------- |
-| baseStatus | String | 单据状态 | 审核状态：4 |
-| billTypeID | String | 单据类型 | 采购订单：220 |
-| bizDate | Date | 业务日期 | 毫秒 |
-| createTime | Date | 制单日期 | 毫秒 |
-| bizType | String | 业务类型 | 普通采购：110 |
-| creator | String | 制单人 | EAS用户编码 |
-| currency | String | 币别 | EAS币别编码或ISO货币代码，人民币：BB01或RMB |
-| exchangeRate | BigDecimal | 汇率 |  |
-| inTax | boolean | 是否含税 | true |
-| paymentType | String | 付款方式 | 赊购：004 |
-| purchaseOrgUnit | String | 采购组织 | EAS采购组织编码 |
-| supplier | String | 供应商 | EAS供应商编码 |
-| totalAmount | BigDecimal | 总金额 | 保留2位小数 |
-| totalTax | BigDecimal | 总税额 | 保留2位小数 |
-| totalTaxAmount | BigDecimal | 总价税合计 | 保留2位小数 |
-| localTotalAmount | BigDecimal | 本位币总金额 | 保留2位小数 |
-| localTotalTaxAmount | BigDecimal | 本位币总加税合计 | 保留2位小数 |
-| fromSystem | String | 来源系统 | 讯宇：XY |
-| sourceFunction | String | 来源功能 | 预留字段 |
-| entries | List | 分录 |  |
+字段    | 字段类型 | 字段说明 | 备注
+------- | -------- | -------- | --------
+baseStatus | String | 单据状态 | 审核状态：4
+billTypeID | String | 单据类型 | 采购订单：220
+bizDate | Date | 业务日期 | 毫秒
+createTime | Date | 制单日期 | 毫秒
+bizType | String | 业务类型 | 普通采购：110
+creator | String | 制单人 | EAS用户编码
+currency | String | 币别 | EAS币别编码或ISO货币代码，人民币：BB01或RMB
+exchangeRate | BigDecimal | 汇率 | 
+inTax | boolean | 是否含税 | true
+paymentType | String | 付款方式 | 赊购：004
+purchaseOrgUnit | String | 采购组织 | EAS采购组织编码
+supplier | String | 供应商 | EAS供应商编码
+totalAmount | BigDecimal | 总金额 | 保留2位小数
+totalTax | BigDecimal | 总税额 | 保留2位小数
+totalTaxAmount | BigDecimal | 总价税合计 | 保留2位小数
+localTotalAmount | BigDecimal | 本位币总金额 | 保留2位小数
+localTotalTaxAmount | BigDecimal | 本位币总加税合计 | 保留2位小数
+fromSystem | String | 来源系统 | 讯宇：XY
+sourceFunction | String | 来源功能 | 预留字段
+entries | List | 分录 | 
 
 #### 分录字段
 
-| 字段    | 字段类型 | 字段说明 | 备注 |
-| ------- | -------- | -------- | -------- |
-| seq | int | 行号 | 回告报文中会携带 | -------- |
-| orderNumber | String | 供应商订单号 |  |
-| bizTraceNumber | String | 业务跟踪号 |  |
-| taxPrice | BigDecimal | 含税单价 | 保留6位小数 |
-| actualPrice | BigDecimal | 实际单价 | 保留6位小数 |
-| actualTaxPrice | BigDecimal | 实际含税单价 | 保留6位小数 |
-| price | BigDecimal | 单价 | 保留6位小数 |
-| qty | BigDecimal | 数量 |  |
-| baseQty | BigDecimal | 基本数量 |  |
-| discountRate | BigDecimal | 折扣率 |  |
-| discountAmount | BigDecimal | 折扣额 | 保留2位小数 |
-| taxRate | BigDecimal | 税率 |  |
-| taxAmount | BigDecimal | 价税合计 | 保留2位小数 |
-| amount | BigDecimal | 金额 | 保留2位小数 |
-| tax | BigDecimal | 税额 | 保留2位小数 |
-| localTaxAmount | BigDecimal | 本位币价税合计 | 保留2位小数 |
-| localAmount | BigDecimal | 本位币金额 | 保留2位小数 |
-| localTax | BigDecimal | 本位币税额 | 保留2位小数 |
-| material | String | 物料 | EAS物料编码 |
-| present | boolean | 是否赠品 | 非赠品：false；赠品：true |
+字段    | 字段类型 | 字段说明 | 备注
+------- | -------- | -------- | --------
+seq | int | 行号 | 回告报文中会携带 | --------
+orderNumber | String | 供应商订单号 | 
+bizTraceNumber | String | 业务跟踪号 | 
+taxPrice | BigDecimal | 含税单价 | 保留6位小数
+actualPrice | BigDecimal | 实际单价 | 保留6位小数
+actualTaxPrice | BigDecimal | 实际含税单价 | 保留6位小数
+price | BigDecimal | 单价 | 保留6位小数
+qty | BigDecimal | 数量 | 
+baseQty | BigDecimal | 基本数量 | 
+discountRate | BigDecimal | 折扣率 | 
+discountAmount | BigDecimal | 折扣额 | 保留2位小数
+taxRate | BigDecimal | 税率 | 
+taxAmount | BigDecimal | 价税合计 | 保留2位小数
+amount | BigDecimal | 金额 | 保留2位小数
+tax | BigDecimal | 税额 | 保留2位小数
+localTaxAmount | BigDecimal | 本位币价税合计 | 保留2位小数
+localAmount | BigDecimal | 本位币金额 | 保留2位小数
+localTax | BigDecimal | 本位币税额 | 保留2位小数
+material | String | 物料 | EAS物料编码
+present | boolean | 是否赠品 | 非赠品：false；赠品：true
 
 ***
 ### <span id="msgJson">2.报文</span>
@@ -495,61 +495,61 @@ ___
 ## <span id="PI">采购入库单</span>
 ###  1.字段定义
 #### 单据头字段
-| 字段    | 字段类型 | 字段说明 | 备注 |
-| ------- | -------- | -------- | -------- |
-| baseStatus | String | 单据状态 | 审核状态：4 |
-| billTypeID | String | 单据类型 | 采购入库单：103 |
-| bizDate | Date | 业务日期 | 毫秒 |
-| bizType | String | 业务类型 | 普通采购：110 |
-| transactionType | String | 事务类型 | 普通采购：001 |
-| creator | String | 制单人 | EAS用户编码 |
-| currency | String | 币别 | EAS币别编码或ISO货币代码，人民币：BB01或RMB |
-| exchangeRate | BigDecimal | 汇率 |  |
-| id | String | 来源单据id | EAS的采购订单id |
-| inTax | boolean | 是否含税 | 含税：true；不含税：false |
-| paymentType | String | 付款方式 | 赊购：004 |
-| sourceFunction | String | 来源功能 | 预留字段 |
-| fromSystem | String | 来源系统 | XY |
-| storageOrgUnit | String | 库存组织 | EAS库存组织编码 |
-| supplier | String | 供应商 | EAS供应商编码 |
-| totalActualCost | BigDecimal | 总实际成本 | 保留2位小数 |
-| totalAmount | BigDecimal | 总金额 | 保留2位小数 |
-| totalLocalAmount | BigDecimal | 总本位币金额 | 保留2位小数 |
-| totalQty | BigDecimal | 总数量 |  |
-| entries | List | 分录 |  |
+字段    | 字段类型 | 字段说明 | 备注
+------- | -------- | -------- | --------
+baseStatus | String | 单据状态 | 审核状态：4
+billTypeID | String | 单据类型 | 采购入库单：103
+bizDate | Date | 业务日期 | 毫秒
+bizType | String | 业务类型 | 普通采购：110
+transactionType | String | 事务类型 | 普通采购：001
+creator | String | 制单人 | EAS用户编码
+currency | String | 币别 | EAS币别编码或ISO货币代码，人民币：BB01或RMB
+exchangeRate | BigDecimal | 汇率 | 
+id | String | 来源单据id | EAS的采购订单id
+inTax | boolean | 是否含税 | 含税：true；不含税：false
+paymentType | String | 付款方式 | 赊购：004
+sourceFunction | String | 来源功能 | 预留字段
+fromSystem | String | 来源系统 | XY
+storageOrgUnit | String | 库存组织 | EAS库存组织编码
+supplier | String | 供应商 | EAS供应商编码
+totalActualCost | BigDecimal | 总实际成本 | 保留2位小数
+totalAmount | BigDecimal | 总金额 | 保留2位小数
+totalLocalAmount | BigDecimal | 总本位币金额 | 保留2位小数
+totalQty | BigDecimal | 总数量 | 
+entries | List | 分录 | 
 
 #### 分录字段
-| 字段    | 字段类型 | 字段说明 | 备注 |
-| ------- | -------- | -------- | -------- |
-| seq | int | 行号 | 会携带在回告报文中 |
-| id | String | 来源单据明细id | EAS采购订单分录id |
-| bizTraceNumber | String | 业务跟踪号 |  |
-| orderNumber | String | 供应商订单号 |  |
-| warehouse | String | 仓库 | 备注 |
-| material | String | 物料 | EAS物料编码 |
-| location | String | 库位 | 良品区：01；机损区：02；箱损区：03；待报废：04；超保区：05；售后区 |
-| lot | String | 批次 |  |
-| taxPrice | BigDecimal | 含税单价 | 保留6位小数 |
-| actualTaxPrice | BigDecimal | 实际含税单价 | 保留6位小数 |
-| actualPrice | BigDecimal | 实际单价 | 保留6位小数 |
-| price | BigDecimal | 单价 | 保留6位小数 |
-| unitActualCost | BigDecimal | 单位实际成本 | 保留6位小数 |
-| unitPurchaseCost | BigDecimal | 单位采购成本 | 保留6位小数 |
-| discountRate | BigDecimal | 折扣率 |  |
-| discountAmount | BigDecimal | 折扣 | 保留2位小数 |
-| taxRate | BigDecimal | 税率 |  |
-| tax | BigDecimal | 税额 | 保留2位小数 |
-| taxAmount | BigDecimal | 价税合计 | 保留2位小数 |
-| actualCost | BigDecimal | 实际成本 | 保留2位小数 |
-| amount | BigDecimal | 金额 | 保留2位小数 |
-| qty | BigDecimal | 数量 |  |
-| baseQty | BigDecimal | 数量 |  |
-| localAmount | BigDecimal | 本位币金额 | 保留2位小数 |
-| localPrice | String | 本位币单价 | 保留6位小数 |
-| localTax | String | 本位币税额 | 保留2位小数 |
-| localTaxAmount | String | 本位币价税合计 | 保留2位小数 |
-| purchaseCost | BigDecimal | 采购成本 | 保留2位小数 |
-| present | boolean | 是否赠品 | 赠品：true; 非赠品：false。默认false |
+字段    | 字段类型 | 字段说明 | 备注
+------- | -------- | -------- | --------
+seq | int | 行号 | 会携带在回告报文中
+id | String | 来源单据明细id | EAS采购订单分录id
+bizTraceNumber | String | 业务跟踪号 | 
+orderNumber | String | 供应商订单号 | 
+warehouse | String | 仓库 | 备注
+material | String | 物料 | EAS物料编码
+location | String | 库位 | 良品区：01；机损区：02；箱损区：03；待报废：04；超保区：05；售后区
+lot | String | 批次 | 
+taxPrice | BigDecimal | 含税单价 | 保留6位小数
+actualTaxPrice | BigDecimal | 实际含税单价 | 保留6位小数
+actualPrice | BigDecimal | 实际单价 | 保留6位小数
+price | BigDecimal | 单价 | 保留6位小数
+unitActualCost | BigDecimal | 单位实际成本 | 保留6位小数
+unitPurchaseCost | BigDecimal | 单位采购成本 | 保留6位小数
+discountRate | BigDecimal | 折扣率 | 
+discountAmount | BigDecimal | 折扣 | 保留2位小数
+taxRate | BigDecimal | 税率 | 
+tax | BigDecimal | 税额 | 保留2位小数
+taxAmount | BigDecimal | 价税合计 | 保留2位小数
+actualCost | BigDecimal | 实际成本 | 保留2位小数
+amount | BigDecimal | 金额 | 保留2位小数
+qty | BigDecimal | 数量 | 
+baseQty | BigDecimal | 数量 | 
+localAmount | BigDecimal | 本位币金额 | 保留2位小数
+localPrice | String | 本位币单价 | 保留6位小数
+localTax | String | 本位币税额 | 保留2位小数
+localTaxAmount | String | 本位币价税合计 | 保留2位小数
+purchaseCost | BigDecimal | 采购成本 | 保留2位小数
+present | boolean | 是否赠品 | 赠品：true; 非赠品：false。默认false
 ***
 ### 2.报文
 ```json
