@@ -551,7 +551,7 @@ localTax | String | 本位币税额 | 保留2位小数
 localTaxAmount | String | 本位币价税合计 | 保留2位小数
 purchaseCost | BigDecimal | 采购成本 | 保留2位小数
 present | boolean | 是否赠品 | 赠品：true; 非赠品：false。默认false
-***
+
 ### 2.报文
 ```json
 {
