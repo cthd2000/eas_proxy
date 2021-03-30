@@ -392,7 +392,7 @@ entries | List | 分录 |
 
 字段 | 字段类型 | 字段说明 | 备注
 --- | --- | --- | ---
-seq | int | 行号 | 回告报文中会携带 |
+seq | int | 行号 | 回告报文中会携带
 orderNumber | String | 供应商订单号 | 
 bizTraceNumber | String | 业务跟踪号 | 
 taxPrice | BigDecimal | 含税单价 | 保留6位小数
