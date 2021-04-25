@@ -99,6 +99,7 @@ SN | 无来源销售出库单
 IS | 库存状态调整单
 CU | 客户
 SU | 供应商
+PP | 采购计划单
 
 ## <span id="http">Http 响应</span>
 
