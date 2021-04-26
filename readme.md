@@ -25,7 +25,7 @@
 | msgCode             | string   | 消息唯一业务编码                                             |
 | originCallbackUrl   | string   | 来源回调 url                                                 |
 | originProject       | string   | 来源系统                                                     |
-| sign                | string   | 签名(通过参数自然排序/字典序拼接而成的 md5( key1=val1&key2=val2&...&projectKey=xxx)) |
+| sign                | string   | 签名(通过参数自然排序/字典序拼接而成的 md5( key1=val1&key2=val2&...&projectKey=xxx))，详情见，eas_proxy/util/sign.md |
 
 #### 报文样例
 ```json
@@ -194,6 +194,7 @@ proxy调用来源系统（originCallbackUrl），回告消息的处理结果
 | updateDate                | date     | 更新日期         |
 
 ## <span id="bizType">业务类型</span>
+业务报文详情见：eas_proxy/model目录
 
 | 编码      | 说明             |
 | --------- | ---------------- |
