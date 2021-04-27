@@ -7,26 +7,43 @@
 | 正式环境 | http://easproxy.api.yhglobal.cn |
 | 测试环境 | http://47.104.65.97:58029       |
 
-
+## <span id="sign">签名</span>
+其它系统调用eas_proxy的任何接口，需带上签名（sign）参数。[签名算法链接](https://github.com/cthd2000/eas_proxy/blob/master/util/sign.md)
 
 ## 1、推送消息接口
-
+> 用途：其它系统调用eas_proxy， 向该其推送数据
+> 调用链条:  由其它系统调用eas_proxy接口<br>
 > 请求方式：POST<br>
 > 请求URL ：[/msg/exchange](#)<br>
-> 调用链条:  由讯宇系统调用eas_proxy服务
+
 
 ### 1.1、请求
 #### 请求参数
 
 | 字段                | 字段类型 | 字段说明                     |
 | ------------------- | -------- | ------------------------- |
-| [bizType](#bizType) | string   | 业务类型                                                     |
-| msgCode             | string   | 消息唯一业务编码                                             |
-| originCallbackUrl   | string   | 来源回调 url                                                 |
-| originProject       | string   | 来源系统                                                     |
-| sign                | string   | 签名(通过参数自然排序/字典序拼接而成的 md5( key1=val1&key2=val2&...&projectKey=xxx))，详情见，eas_proxy/util/sign.md |
+| [bizType](#bizType) | string   | 业务类型 |
+| msgCode             | string   | 消息唯一业务编码 |
+| originCallbackUrl   | string   | 来源回调 url |
+| originProject       | string   | 来源系统 |
+| sign                | string   | [签名](#sign) |
 
-#### 报文样例
+### 1.2、响应
+#### 响应参数
+[Http 响应](#http)
+
+#### data 参数
+[完整消息类型](#exchangeMsg)
+
+### 1.3、报文样例
+> 推送不同的业务单据，需要匹配对应的bizType（业务类型）和msgJson（业务报文）
+> 以下以销售订单为例
+
+#### 请求报文样例
+> 业务单据:  销售订单<br>
+> bizType：SO<br>
+> msgJson ：[销售订单报文链接](https://github.com/cthd2000/eas_proxy/blob/master/model/销售订单.md)
+
 ```json
 {
 	"bizType":"SO",
@@ -37,15 +54,7 @@
 	"sign": "855b600cf5b8cc0fcc6b794181cd2878"
 }
 ```
-### 1.2、返回
-#### 返回参数
-[Http 响应](#http)
-
-#### data 参数
-
-[完整消息类型](#exchangeMsg)
-
-#### 报文样例
+#### 响应报文样例
 ```json
 {
     "code": 0,
@@ -68,26 +77,31 @@
 }
 ```
 
-
-
 ## 2、消息查询接口
-
-外部系统调用proxy，查询某条消息的状态
-
+> 用途：其它系统调用eas_proxy，查询某条消息的状态
+> 调用链条:  由其它系统调用eas_proxy接口
 > 请求方式：POST<br>
 > 请求URL ：[/msg/status](#)<br>
-> 调用链条:  由讯宇系统调用eas_proxy服务
 
 ### 2.1、请求
 #### 请求参数
 
-| 字段          | 字段类型 | 字段说明                        |
-| ------------- | -------- | --------------------------- |
-| index         | long     | 消息游标(调用“推送消息接口”的返回参数)                       |
-| originProject | string   | 来源系统                                                     |
-| sign          | string   | 签名(通过参数自然排序拼接而成的 md5(key1=val1&key2=val2&...&projectKey=xxx)) |
+| 字段          | 字段类型 | 字段说明 |
+| ------------- | -------- | ------------- |
+| index         | long     | 消息游标(调用“推送消息接口”的返回参数) |
+| originProject | string   | 来源系统 |
+| sign          | string   | [签名](#sign) |
 
-#### 请求样例
+### 2.2、响应
+####  响应参数
+[Http 响应](#http)
+
+#### data 参数
+
+[完整消息类型](#exchangeMsg)
+
+### 2.3、报文样例
+#### 请求报文样例
 ```json
 {
 	"index": 1,
@@ -95,15 +109,10 @@
 	"sign": "743d0fdcd3539903268581648358b093"
 }
 ```
-### 2.2、返回
-####  返回参数
-[Http 响应](#http)
+#### 响应报文样例
+> 注意，resultJson（结果json）为EAS处理该条数据的结果，<br>
+> 其报文结构并非固定，具体需查看bizType（业务类型）对应的业务单据文档
 
-#### data 参数
-
-[完整消息类型](#exchangeMsg)
-
-#### 返回样例
 ```json
 {
     "code": 0,
@@ -126,18 +135,25 @@
 }
 ```
 
-
-
 ## 3、消息回告来源系统
 
-> 调用链条:  由eas_proxy调用讯宇（originCallbackUrl）的服务
+> 调用链条:  由eas_proxy调用其它系统（originCallbackUrl）的服务
 
 ### 3.1、回调
 #### 回调参数
 
 [完整消息类型](#exchangeMsg)
 
-#### 报文样例
+### 3.2、响应
+#### 响应参数
+
+| 字段  | 字段类型 | 字段说明                     |
+| ----- | -------- | ---------------------------- |
+| state | integer  | 消息接收状态，0 代表成功接收 |
+| desc  | string   | 说明                         |
+
+### 3.3、报文样例
+#### 回调报文样例
 ```json
 {
   "resultJson": "{}",
@@ -156,17 +172,9 @@
   "createDate": "2019-01-11 10:01:38"
 }
 ```
-### 3.2、响应
-#### 响应参数
+#### 响应报文样例
 
-| 字段  | 字段类型 | 字段说明                     |
-| ----- | -------- | ---------------------------- |
-| state | integer  | 消息接收状态，0 代表成功接收 |
-| desc  | string   | 说明                         |
-
-### 响应样例
-
-注意此状态为消息的「接收」状态，成功接收就为 0，跟业务成功与否没有关系
+> 注意此状态为消息的「接收」状态，成功接收就为 0，跟业务成功与否没有关系
 
 ```json
 {
@@ -175,7 +183,8 @@
 }
 ```
 
-## <span id="exchangeMsg">消息结构</span>
+## 附录
+### <span id="exchangeMsg">1、消息结构</span>
 
 | 字段                      | 字段类型 | 字段说明         |
 | ------------------------- | -------- | ---------------- |
@@ -186,23 +195,23 @@
 | [msgJson](#msgJson)       | json     | 来源业务 json    |
 | originCallbackUrl         | string   | 来源回调 url     |
 | createDate                | date     | 创建日期         |
-| [resultJson](#resultJson) | json     | 结果 json        |
+| [resultJson](#resultJson) | json     | 结果 json [链接](https://github.com/cthd2000/eas_proxy/tree/master/model) |
 | msgState                  | integer  | 消息状态         |
 | exchangeUrl               | string   | 代理回调交换 url |
 | exchangeState             | integer  | 交换状态         |
 | exchangeDate              | date     | 交换日期         |
 | updateDate                | date     | 更新日期         |
 
-## <span id="bizType">业务类型</span>
+### <span id="bizType">2、业务类型</span>
 业务报文详情见：eas_proxy/model目录
 
 | 编码 | 名称 | 备注 |
 | --------- | --------- | --------- |
-| [PO](#PO) | 采购订单 | https://github.com/cthd2000/eas_proxy/blob/master/model/采购订单.md |
-| [PI](#PI) | 采购入库 | https://github.com/cthd2000/eas_proxy/blob/master/model/采购入库单.md |
+| [PO](#PO) | 采购订单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/采购订单.md) |
+| [PI](#PI) | 采购入库 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/采购入库单.md) |
 | PR        | 采购退货 |  |
-| [SO](#SO) | 销售订单 | https://github.com/cthd2000/eas_proxy/blob/master/model/销售订单.md |
-| [SS](#SS) | 销售出库 | https://github.com/cthd2000/eas_proxy/blob/master/model/销售出库单.md |
+| [SO](#SO) | 销售订单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/销售订单.md) |
+| [SS](#SS) | 销售出库 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/销售出库单.md) |
 | SR        | 销售退货 |  |
 | IT        | 二方调拨单 |  |
 | ST        | 库存调拨单 |  |
@@ -223,7 +232,7 @@
 | SU        | 供应商 |  |
 | PP        | 采购计划单 |  |
 
-## <span id="http">Http 响应</span>
+### <span id="http">3、Http 响应</span>
 
 | 字段 | 字段类型 | 字段说明              |
 | ---- | -------- | --------------------- |
