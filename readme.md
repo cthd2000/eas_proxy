@@ -213,7 +213,7 @@
 | [SO](#SO) | 销售订单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/销售订单.md) |
 | [SS](#SS) | 销售出库 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/销售出库单.md) |
 | SR        | 销售退货 |  |
-| IT        | 二方调拨单 |  |
+| IT        | 二方调拨单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/二方调拨单.md) |
 | ST        | 库存调拨单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/库存调拨单.md) |
 | TO        | 调拨出库单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/调拨出库单.md) |
 | TI        | 调拨入库单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/调拨入库单.md) |
