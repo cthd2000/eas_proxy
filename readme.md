@@ -11,10 +11,10 @@
 其它系统调用eas_proxy的任何接口，需带上签名（sign）参数。[签名算法链接](https://github.com/cthd2000/eas_proxy/blob/master/util/sign.md)
 
 ## 1、推送消息接口
-> 用途：其它系统调用eas_proxy， 向该其推送数据
+> 用途：其它系统调用eas_proxy， 向该其推送数据<br>
 > 调用链条:  由其它系统调用eas_proxy接口<br>
 > 请求方式：POST<br>
-> 请求URL ：[/msg/exchange](#)<br>
+> 请求URL ：[/msg/exchange](#)
 
 
 ### 1.1、请求
@@ -36,7 +36,7 @@
 [完整消息类型](#exchangeMsg)
 
 ### 1.3、报文样例
-> 推送不同的业务单据，需要匹配对应的bizType（业务类型）和msgJson（业务报文）
+> 推送不同的业务单据，需要匹配对应的bizType（业务类型）和msgJson（业务报文）<br>
 > 以下以销售订单为例
 
 #### 请求报文样例
@@ -78,8 +78,8 @@
 ```
 
 ## 2、消息查询接口
-> 用途：其它系统调用eas_proxy，查询某条消息的状态
-> 调用链条:  由其它系统调用eas_proxy接口
+> 用途：其它系统调用eas_proxy，查询某条消息的状态<br>
+> 调用链条:  由其它系统调用eas_proxy接口<br>
 > 请求方式：POST<br>
 > 请求URL ：[/msg/status](#)<br>
 
