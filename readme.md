@@ -214,9 +214,9 @@
 | [SS](#SS) | 销售出库 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/销售出库单.md) |
 | SR        | 销售退货 |  |
 | IT        | 二方调拨单 |  |
-| ST        | 库存调拨单 |  |
-| TO        | 调拨出库单 |  |
-| TI        | 调拨入库单 |  |
+| ST        | 库存调拨单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/库存调拨单.md) |
+| TO        | 调拨出库单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/调拨出库单.md) |
+| TI        | 调拨入库单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/调拨入库单.md) |
 | AO        | 其他出库单 |  |
 | AI        | 其他入库单 |  |
 | AR        | 应收单 |  |
