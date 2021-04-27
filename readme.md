@@ -12,7 +12,7 @@
 ## 1、推送消息接口
 
 > 请求方式：POST<br>
-> 请求URL ：[/msg/exchange](#)
+> 请求URL ：[/msg/exchange](#)<br>
 > 调用链条:  由讯宇系统调用eas_proxy服务
 
 ### 1.1、请求
@@ -75,7 +75,7 @@
 外部系统调用proxy，查询某条消息的状态
 
 > 请求方式：POST<br>
-> 请求URL ：[/msg/status](#)
+> 请求URL ：[/msg/status](#)<br>
 > 调用链条:  由讯宇系统调用eas_proxy服务
 
 ### 2.1、请求
