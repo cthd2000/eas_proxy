@@ -11,7 +11,7 @@
 其它系统调用eas_proxy的任何接口，需带上签名（sign）参数。[签名算法链接](https://github.com/cthd2000/eas_proxy/blob/master/util/sign.md)
 
 ## 1、推送消息接口
-> 用途：其它系统调用eas_proxy， 向该其推送数据<br>
+> 用途：其它系统调用eas_proxy， 向eas_proxy推送数据<br>
 > 调用链条:  由其它系统调用eas_proxy接口<br>
 > 请求方式：POST<br>
 > 请求URL ：[/msg/exchange](#)
@@ -207,11 +207,11 @@
 
 | 编码 | 名称 | 备注 |
 | --------- | --------- | --------- |
-| [PO](#PO) | 采购订单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/采购订单.md) |
-| [PI](#PI) | 采购入库 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/采购入库单.md) |
+| PO | 采购订单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/采购订单.md) |
+| PI | 采购入库 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/采购入库单.md) |
 | PR        | 采购退货 |  |
-| [SO](#SO) | 销售订单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/销售订单.md) |
-| [SS](#SS) | 销售出库 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/销售出库单.md) |
+| SO | 销售订单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/销售订单.md) |
+| SS | 销售出库 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/销售出库单.md) |
 | SR        | 销售退货 |  |
 | IT        | 二方调拨单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/二方调拨单.md) |
 | ST        | 库存调拨单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/库存调拨单.md) |
