@@ -207,29 +207,29 @@
 
 | 编码 | 名称 | 备注 |
 | --------- | --------- | --------- |
-| PO | 采购订单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/采购订单.md) |
-| PI | 采购入库 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/采购入库单.md) |
-| PR        | 采购退货 |  |
-| SO | 销售订单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/销售订单.md) |
-| SS | 销售出库 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/销售出库单.md) |
-| SR        | 销售退货 |  |
-| IT        | 二方调拨单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/二方调拨单.md) |
-| ST        | 库存调拨单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/库存调拨单.md) |
-| TO        | 调拨出库单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/调拨出库单.md) |
-| TI        | 调拨入库单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/调拨入库单.md) |
-| AO        | 其他出库单 |  |
-| AI        | 其他入库单 |  |
+| PO | 采购订单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/供应链管理/采购订单.md) |
+| PI | 采购入库 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/供应链管理/采购入库单.md) |
+| PR        | 采购退货 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/供应链管理/采购退货单.md) |
+| SO | 销售订单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/供应链管理/销售订单.md) |
+| SS | 销售出库 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/供应链管理/销售出库单.md) |
+| SR        | 销售退货 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/供应链管理/销售退货单.md) |
+| IT        | 二方调拨单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/供应链管理/二方调拨单.md) |
+| ST        | 库存调拨单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/供应链管理/库存调拨单.md) |
+| TO        | 调拨出库单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/供应链管理/调拨出库单.md) |
+| TI        | 调拨入库单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/供应链管理/调拨入库单.md) |
+| AO        | 其他出库单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/供应链管理/其他出库单.md) |
+| AI        | 其他入库单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/供应链管理/其他出库单.md) |
 | AR        | 应收单 |  |
 | AP        | 应付单 |  |
-| CO        | 收款单 |  |
-| BP        | 付款单 |  |
-| LM        | 库位移动单 |  |
+| CO        | 收款单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/财务会计/收款单.md) |
+| BP        | 付款单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/财务会计/付款单.md) |
+| LM        | 库位移动单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/供应链管理/库位移动单.md) |
 | CS        | 确认签收日期 |  |
-| VO        | 凭证 |  |
-| SN        | 无来源销售出库单 |  |
+| VO        | 凭证 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/财务会计/凭证.md) |
+| SN        | 无来源销售出库单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/供应链管理/无来源销售出库单.md)  |
 | IS        | 库存状态调整单 |  |
-| CU        | 客户 |  |
-| SU        | 供应商 |  |
+| CU        | 客户 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/基础资料/客户-创建.md) |
+| SU        | 供应商 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/基础资料/供应商-创建.md) |
 | PP        | 采购计划单 |  |
 
 ### <span id="http">3、Http 响应</span>
