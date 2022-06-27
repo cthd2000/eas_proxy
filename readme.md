@@ -226,6 +226,7 @@
 | LM        | 库位移动单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/供应链管理/库位移动单.md) |
 | CS        | 确认签收日期 |  |
 | VO        | 凭证 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/财务会计/凭证.md) |
+| VO_SEQ        | 凭证-单线程 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/财务会计/凭证.md) |
 | SN        | 无来源销售出库单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/供应链管理/无来源销售出库单.md)  |
 | IS        | 库存状态调整单 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/供应链管理/库存状态调整单.md) |
 | CU        | 客户 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/基础资料/客户-创建.md) |
