@@ -232,6 +232,9 @@
 | CU        | 客户 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/基础资料/客户-创建.md) |
 | SU        | 供应商 | [文档链接](https://github.com/cthd2000/eas_proxy/blob/master/model/基础资料/供应商-创建.md) |
 | PP        | 采购计划单 |  |
+| ARIV        | 应收发票单 |  |
+| ARIVQ        | 应收发票单-查询 |  |
+| ARIVC        | 应收发票单-取消 |  |
 
 ### <span id="http">3、Http 响应</span>
 
